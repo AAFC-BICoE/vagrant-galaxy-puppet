@@ -1,10 +1,15 @@
 # vagrant-galaxy-puppet
 
 ## Setup
+
+Grab puppet-galaxy modules to permit local updates
+
+* puppet-galaxy at least seems to require some updates; suppose I'll need to fork it going forward
+
+```bash
 git clone https://github.com/puppet-galaxy/galaxy-roles-profiles.git
 git clone https://github.com/puppet-galaxy/puppet-galaxy.git
-
-* This requires a slight modification; suppose I'll need to fork it
+```
 
 Update config/config.yml
 
