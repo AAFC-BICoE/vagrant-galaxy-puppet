@@ -73,8 +73,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = "manifests/"
     puppet.manifest_file = "default.pp"
-    #puppet.module_path = [ 'manifests/galaxy-roles-profiles/', 'manifests/puppet-galaxy' ]
-    puppet.hiera_config_path = "hieradata/sqlite-multicore.yaml"
+    # note that this appears to be the path on the host, not within the guest
+    puppet.hiera_config_path = "hiera.yaml"
+    puppet.options = "--verbose --debug"
   end
   
 end
